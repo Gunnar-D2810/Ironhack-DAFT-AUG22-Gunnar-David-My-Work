@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://i.pinimg.com/564x/fe/d2/f5/fed2f5e7d44aa5d77e06dd88c639bf20.jpg" alt="Data Analytics" style="height: 225px; width:1300px;"/>
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--kA8sxPg6--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/http://anastasionico.uk/img/blog/productivity-secret-of-a-web-developer-coffee.jpg" alt="Data Analytics" style="height: 225px; width:1300px;"/>
 
 </div>
 
