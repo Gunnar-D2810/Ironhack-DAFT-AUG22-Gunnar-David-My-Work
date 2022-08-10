@@ -1,7 +1,7 @@
 
 ---
 
-**</strong>Please find my submission for Lab | Python Sets, Tuples, Dicts<strong>**
+*Please find my submission for Lab | Python Sets, Tuples, Dicts*
 
 ---
 
