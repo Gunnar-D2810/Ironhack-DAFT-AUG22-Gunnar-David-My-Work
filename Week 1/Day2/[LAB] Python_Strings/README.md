@@ -1,7 +1,7 @@
 
 ---
 
-**<BIG>Please find my submission for Lab | Python Sets, Tuples, Dicts<BIG>**
+**</strong>Please find my submission for Lab | Python Sets, Tuples, Dicts<strong>**
 
 ---
 
