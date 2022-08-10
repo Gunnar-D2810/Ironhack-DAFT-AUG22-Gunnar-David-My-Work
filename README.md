@@ -1,2 +1,12 @@
-# Ironhack-DAFT-AUG22-Gunnar-David
-[LAB]s are stored here by Week and Day
+test
+<!-- Yay, no errors, warnings, or alerts! -->
+
+<div align="center">
+
+<img src="header.jpg" alt="Data Analytics" style="height: 225px; width:1300px;"/>
+
+</div>
+
+
+
+**👉 **&nbsp;** This repo contains my submissions/ work portfolio **
