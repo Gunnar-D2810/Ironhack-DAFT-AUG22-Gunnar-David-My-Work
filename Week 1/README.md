@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--H0r31kfl--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/http://anastasionico.uk/img/1/workplace_lapetop_notebook_coffee_cup_cup_of_coffee_working_office_startup-929375.jpg" alt="Data Analytics" style="height: 225px; width:1300px;"/>
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--H0r31kfl--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/http://anastasionico.uk/img/1/workplace_lapetop_notebook_coffee_cup_cup_of_coffee_working_office_startup-929375.jpg" alt="Data Analytics" style="height: 387px; width:678px;"/>
 
 </div>
 
