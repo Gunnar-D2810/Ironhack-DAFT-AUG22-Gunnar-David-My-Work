@@ -336,8 +336,8 @@ ORDER BY date, duration ASC;
 #In the trans table, for account_id 396, sum the amount of transactions for each type (VYDAJ = Outgoing, PRIJEM = Incoming). Your output should have the account_id, the type and the sum of amount, named as total_amount. Sort alphabetically by type.
 
 #Expected result:
-396	PRIJEM	1028138.6999740601
-396	VYDAJ	1485814.400024414
+#396	PRIJEM	1028138.6999740601
+#396	VYDAJ	1485814.400024414
 
 #Solution Query 18
 
@@ -400,20 +400,20 @@ WHERE
 GROUP BY type
 ORDER BY type DESC;
 
-#SELECT *FROM(
-#		account_id,
-#		ceiling(sum(amount)) as 'incoming amount',
-#		ceiling(sum(amount)) as 'outgoing_amount'
-#		REPLACE(REPLACE(type,'PRIJEM','INCOMING'),'VYDAJ','OUTGOING') as transaction_type,
-#		WHERE 
-#		account_id = 396
-#)
-#PIVOT (
- # CAST(avg(ceiling(sum(amount)) as 'incoming amount')AS DECIMAL (4,1))
-  #FOR transaction_type in (
-   # 1 PRIJEM, 2 VYDAJ
-  #)
-#ORDER BY year DESC
+SELECT * FROM(
+		account_id,
+		ceiling(sum(amount)) as 'incoming amount',
+		ceiling(sum(amount)) as 'outgoing_amount',
+		REPLACE(REPLACE(type,'PRIJEM','INCOMING'),'VYDAJ','OUTGOING') as transaction_type,
+		WHERE 
+		account_id = 396
+)
+PIVOT (
+  CAST(avg(ceiling(sum(amount)) as 'incoming amount')AS DECIMAL (4,1))
+  FOR transaction_type in (
+    1 PRIJEM, 2 VYDAJ
+  )
+ORDER BY year DESC
 
 
 

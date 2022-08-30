@@ -35,9 +35,10 @@ SELECT count(film_id) AS 439_inventory_count FROM sakila.inventory
 #YOUNG LANGUAGE
 #YOUTH KICK
 
-SELECT avg(length) FROM sakila.film
-GROUP BY title
-LIMIT 10;
+#2. Solution
+#SELECT avg(length) FROM sakila.film
+#GROUP BY title
+#LIMIT 10;
 
 
 SELECT title FROM sakila.film
@@ -86,6 +87,7 @@ SELECT first_name, last_name FROM sakila.actor
 #BILKO ANONYMOUS
 #BLANKET BEVERLY
 
+#4. Solution
 #Query to check str of family, it is "Family"
 #SELECT name FROM sakila.category
 #LIMIT 10;
@@ -110,3 +112,63 @@ SELECT title FROM sakila.film
 #LORETTA CARPENTER	LORETTA.CARPENTER@sakilacustomer.org
 #CURTIS IRBY	CURTIS.IRBY@sakilacustomer.org
 #TROY QUIGLEY	TROY.QUIGLEY@sakilacustomer.org
+
+#5. Solution
+select first_name, last_name, email from customer
+where address_id in(select address_id from address
+where city_id in (select city_id from city
+where country_id = (select country_id from country
+where country = "Canada")));
+
+#########################################################################################
+#########################################################################################
+
+#Optional
+#Which are films starred by the most prolific actor? Most prolific actor is defined as the actor that has acted in the most number of films. First you will have to find the most prolific actor and then use that actor_id to find the different films that he/she starred.
+#Expected output:
+
+#42 rows including: 
+#BED HIGHBALL
+#CALENDAR GUNFIGHT
+#CHAMBER ITALIAN
+#CHAPLIN LICENSE
+#CHARIOTS CONSPIRACY
+#CLUELESS BUCKET
+#COLDBLOODED DARLING
+#CONEHEADS SMOOCHY
+#DARKNESS WAR
+#DEER VIRGINIAN
+
+#6. Solution
+select title
+from film
+where film_id in
+	(select film_id
+    from film_actor
+    where actor_id =
+    (select actor_id
+    from film_actor
+    group by actor_id
+    order by count(film_id) desc limit 1
+    )
+) limit 10;
+
+#########################################################################################
+
+#7. Films rented by most profitable customer. You can use the customer table and payment table to find the most profitable customer ie the customer that has made the largest sum of payments
+#Expected output:
+
+#44 rows including 
+#DESTINY SATURDAY
+#CYCLONE FAMILY
+#SLUMS DUCK
+#FIDELITY DEVIL
+#SPLASH GUMP
+#MISSION ZOOLANDER
+#MULHOLLAND BEAST
+#PRINCESS GIANT
+#PARIS WEEKEND
+#RACER EGG
+
+#7. Solution
+#select title from film
